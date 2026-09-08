@@ -1,0 +1,39 @@
+name: Build The State of the Herd
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build LaTeX document
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: B.Ryan.2026.The_State_of_the_Herd.tex
+          latexmk_use_xelatex: true
+
+      - name: Rename PDF
+        run: |
+          mv B.Ryan.2026.The_State_of_the_Herd.pdf \
+             B.Ryan.2026.The_State_of_the_Herd-${{ github.run_number }}.pdf
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: state-of-the-herd-${{ github.run_number }}
+          name: The State of the Herd — Build ${{ github.run_number }}
+          body: |
+            Automated build of **The State of the Herd**.
+
+            Commit: `${{ github.sha }}`
+          files: |
+            B.Ryan.2026.The_State_of_the_Herd-${{ github.run_number }}.pdf
+          generate_release_notes: false
