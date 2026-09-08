@@ -1,0 +1,99 @@
+\section{Data Cleaning and Handling}
+
+\subsection{Data Cleaning Procedures}
+
+Survey data will undergo a structured cleaning process prior to statistical analysis. Cleaning will include checking respondent eligibility, response completeness and validity, duplicate or potentially invalid submissions, impossible or internally inconsistent values, and application of the predetermined coding and recoding rules. The raw survey export will be retained as the source dataset, with original responses preserved wherever practicable so that cleaning and recoding decisions remain auditable and reproducible.
+
+The cleaning process will distinguish between excluding an entire response and treating an individual response or value as missing or invalid. A respondent will not be excluded solely because they decline to answer an individual question or select ``prefer not to say,'' unless that response prevents the respondent from meeting a separately defined inclusion criterion.
+
+% TBD: The final data-cleaning workflow, software, and documentation procedures will be established
+% before substantive analysis.
+
+\subsection{Invalid, Duplicate, and Low-quality Responses}
+
+\sourceimage{1748010}{Unimpressed Glimmercorn}
+
+Responses will be reviewed for evidence that they do not constitute valid individual survey responses. Potential indicators may include failure to meet eligibility requirements, automated or non-human submissions, deliberate disruption, duplicate submissions, or response patterns indicating that the questionnaire was not meaningfully completed. Unusual, humorous, contradictory, or unexpected answers will not by themselves constitute grounds for exclusion where the response is otherwise consistent with a genuine participant's submission.
+
+The dataset will be examined for duplicate or potentially duplicate submissions. Where technical identifiers or metadata are available and their use is consistent with the study's privacy and data-collection procedures, these may be used as part of duplicate-response assessment. Where multiple submissions appear to originate from the same respondent, the predetermined duplicate-handling rule will be applied.
+
+Response quality will be assessed using predetermined criteria considering overall completeness and internal coherence rather than excluding respondents because of unusual demographic characteristics or uncommon fandom preferences. Individual unanswered questions will generally be treated separately from complete-response validity.
+
+% TBD: The specific criteria for invalid, duplicate, automated, inattentive, or patterned responses,
+% minimum completion, implausibly rapid completion, and the rule for retaining duplicate submissions
+% will be established before analysis.
+
+\subsection{Participant Exclusions and Analysis Dataset}
+
+Participants will be excluded from the analytical dataset if they do not meet the predefined inclusion criteria, are determined to be duplicates, or are determined to be invalid or inappropriate according to the predetermined response-quality criteria. Exclusion will apply to the participant's complete response where the issue affects the validity of the submission as a whole.
+
+A participant will not be excluded solely because they provide an unusual response, identify with an uncommon demographic category, select an unexpected combination of characteristics, or decline to answer a sensitive question.
+
+A complete response will be defined as a survey submission containing sufficient responses to satisfy the predetermined completion requirements for inclusion in the primary analytical dataset. Completion will not necessarily require an answer to every individual survey item, particularly where questions are optional, conditional, sensitive, or legitimately not applicable to a respondent.
+
+An incomplete response will be one that does not meet the predetermined requirements for a complete response but may nevertheless contain usable information for some analyses. Partial responses that satisfy participant-level inclusion criteria will be retained where they contain sufficient valid information to contribute to an analysis.
+
+% TBD: The final exclusion thresholds, minimum completion requirements, and participant-level criteria
+% for inclusion in the primary analytical dataset will be established before analysis.
+
+\subsection{Missing Data and Non-substantive Responses}
+
+Missing data will refer to survey information that was expected or available to be provided by a respondent but was not recorded as a substantive response. Missing data will be distinguished from valid responses such as ``None,'' ``Not applicable,'' and ``Prefer not to say,'' where these are explicitly offered as response options.
+
+Missing responses will not automatically be interpreted as negative responses, ``none,'' or absence of the relevant characteristic. Respondents with missing data on one variable will not automatically be excluded from analyses involving other variables for which they provided valid responses.
+
+For select-all-that-apply questions, only explicitly selected categories will be coded as selected. Failure to select a category will not automatically be interpreted as evidence that the respondent actively rejects or does not possess that characteristic where the survey structure does not support that interpretation.
+
+% TBD: The final coding and reporting conventions for unanswered questions, skipped conditional questions,
+% technical missingness, ``Prefer not to say,'' ``Not applicable,'' and other non-substantive responses
+% will be established before analysis.
+
+\subsection{Handling of Missing Observations in Analyses}
+
+The primary descriptive analyses will generally use the available valid observations for each variable, with the denominator reported where necessary so that percentages are interpretable. Subgroup and intersectional analyses will include respondents who provide valid responses for all variables required for the particular analysis where complete cases are necessary. Sample sizes may therefore vary between analyses.
+
+Participant-level missingness will be considered alongside the participant-exclusion and complete-response criteria rather than applying a single missing-data threshold indiscriminately across all analyses.
+
+% TBD: The threshold for substantial completion, the variables required for inclusion in the primary dataset,
+% treatment of respondents who discontinue the survey at different stages, and any complete-case or alternative
+% missing-data procedures for particular analyses will be established before analysis.
+
+\subsection{Data Recoding and Consistency Checks}
+
+Data will be recoded where necessary to convert survey-platform responses into the analytical coding scheme defined in the analysis plan. This may include assigning numeric or labelled codes, separating select-all-that-apply responses into individual binary variables, consolidating substantively equivalent responses, and coding free-text ``Other'' responses where they can be reliably classified.
+
+Responses will be checked for values that are impossible within the defined measurement system or inconsistent with established eligibility and response constraints. Examples may include impossible ages, values outside permitted rating-scale ranges, mutually incompatible selections, or responses that violate explicitly defined survey logic. Such cases will be evaluated against the raw response and relevant survey question before being treated as erroneous.
+
+Where an erroneous individual value can be identified without undermining the validity of the remainder of the response, the value may be treated as missing rather than excluding the respondent's entire submission.
+
+Original response data will be preserved wherever practicable so that recoding decisions can be reviewed or reversed.
+
+% TBD: The final coding dictionary, rules for collapsing rare categories, treatment of free-text responses,
+% procedures for resolving ambiguous responses, allowable ranges, and logical consistency rules will be
+% established before analysis.
+
+\subsection{Predetermined Data-quality Checks}
+
+Before substantive analysis, the dataset will undergo predefined quality-control checks covering respondent eligibility, response completeness, duplicate submissions, variable ranges, categorical coding, select-all-that-apply variables, missing values, and internal consistency. The checks will be applied before examination of substantive descriptive results to minimise the risk that data-quality decisions are influenced by observed analytical findings.
+
+% TBD: The final checklist of data-quality checks, thresholds for triggering manual review or exclusion,
+% order of cleaning operations, and procedures for documenting cleaning decisions will be established
+% before substantive analysis.
+
+\subsection{Participants Included in Each Analysis}
+
+Primary descriptive analyses will include all eligible respondents who meet the participant-level inclusion and data-quality criteria. Analyses will use the maximum number of valid observations available for the variables being examined where appropriate, rather than automatically excluding an otherwise eligible participant because of missing data on an unrelated question.
+
+Small amounts of item-level missingness will therefore generally affect the denominator or available observations for the relevant analysis rather than the respondent's eligibility for the study as a whole.
+
+% TBD: The final rules for minimum subgroup sizes and any analyses requiring complete cases will be specified
+% in the relevant analysis sections.
+
+\subsection{Sensitivity Analyses Concerning Data Exclusions}
+
+\sourceimage{3208909}{You know what Fluttershy saw. You did this to her!}
+
+Sensitivity analyses may be conducted to assess whether substantive descriptive findings are materially affected by reasonable alternative participant-exclusion decisions. Such analyses could compare results under different completion thresholds or alternative treatments of responses identified as potentially low quality, provided that sufficient data are available to support the comparison.
+
+% TBD: Whether formal sensitivity analyses will be conducted, which exclusion criteria will be varied, and
+% which outcomes or descriptive estimates will be compared will be established before analysis.

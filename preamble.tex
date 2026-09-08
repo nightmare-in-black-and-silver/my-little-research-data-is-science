@@ -1,0 +1,117 @@
+% Packages
+
+\usepackage[
+a4paper,
+top=1.8cm,
+bottom=1.8cm,
+left=1.6cm,
+right=1.6cm,
+columnsep=0.7cm
+]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[inkscapearea=page]{svg}
+\usepackage{multicol}
+
+\usepackage{xcolor}
+
+\definecolor{twilighteyes}{HTML}{6D4490}
+\definecolor{twilightmaneone}{HTML}{273873}
+\definecolor{twilightmanetwo}{HTML}{ED438D}
+\definecolor{twilightmanethree}{HTML}{662D8A}
+
+
+% References
+\usepackage[
+style=apa,
+backend=biber
+]{biblatex}
+\addbibresource{references.bib}
+
+% Document formatting
+\setstretch{1.15}
+\setcounter{secnumdepth}{0}
+
+\newcommand{\celestiabullet}{%
+	\includesvg[width=0.8em]{assets/celestia-cutiemark}%
+}
+
+\setlist[itemize]{
+	label=\celestiabullet,
+	leftmargin=*
+}
+
+\newfontfamily\equestriafont{Equestria}[
+Path = assets/fonts/,
+UprightFont = Equestria-Regular,
+ItalicFont = Equestria-Italic,
+BoldFont = Equestria-Bold,
+BoldItalicFont = Equestria-BoldItalic
+]
+
+
+\titleformat{\section}
+{%
+	\equestriafont
+	\fontsize{20pt}{22pt}\selectfont
+	\color{twilighteyes}
+	\hyphenpenalty=10000
+	\exhyphenpenalty=10000
+}
+{}
+{0pt}
+{%
+	\parshape 2
+	0pt \dimexpr\linewidth-2.5em\relax
+	0pt \linewidth
+	\makebox[0pt][l]{%
+		\hspace{\dimexpr\linewidth-2em\relax}%
+		\raisebox{-0.65em}{%
+			\includesvg[height=2em]{assets/twilightsparkle_cutiemark}%
+		}%
+	}%
+}
+
+% Subsection — Twilight mane colour 2
+\titleformat{\subsection}
+{%
+	\equestriafont
+	\fontsize{16pt}{18pt}\selectfont
+	\color{twilightmanetwo}
+	\hyphenpenalty=10000
+	\exhyphenpenalty=10000
+}
+{}
+{0pt}
+{}
+
+% Subsubsection — Twilight mane colour 3
+\titleformat{\subsubsection}
+{%
+	\equestriafont
+	\fontsize{12pt}{14pt}\selectfont
+	\color{twilightmanethree}
+	\hyphenpenalty=10000
+	\exhyphenpenalty=10000
+}
+{}
+{0pt}
+{}
+
+
+\newcommand{\sourceimage}[2]{%
+	\begin{center}
+		\includesvg[width=0.75\linewidth]{assets/#1}%
+		
+		\textit{#2} \parencite{derpibooru#1}
+	\end{center}
+}
+
+\newcommand{\moonbullet}{%
+	\raisebox{-0.30em}{%
+		\includesvg[width=1.2em]{assets/moon}%
+	}%
+}
