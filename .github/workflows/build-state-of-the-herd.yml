@@ -18,6 +18,8 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y inkscape
+          which inkscape
+          inkscape --version
 
       - name: Build LaTeX document
         uses: xu-cheng/latex-action@v4
